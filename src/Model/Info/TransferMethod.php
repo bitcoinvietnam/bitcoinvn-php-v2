@@ -84,6 +84,13 @@ class TransferMethod
     private $infoUrl;
 
     /**
+     * @var array|null
+     *
+     * @Serializer\Type("array")
+     */
+    private $details;
+
+    /**
      * @return string
      */
     public function getId(): string
@@ -169,5 +176,13 @@ class TransferMethod
     public function getInfoUrl(): ?string
     {
         return $this->infoUrl;
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getDetails(): ?array
+    {
+        return $this->details;
     }
 }
