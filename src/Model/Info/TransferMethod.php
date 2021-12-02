@@ -56,25 +56,32 @@ class TransferMethod
     private $internalBalance;
 
     /**
-     * @var boolean
+     * @var float
      *
      * @Serializer\Type("float")
      */
     private $networkFee;
 
     /**
-     * @var boolean
+     * @var float
      *
      * @Serializer\Type("float")
      */
     private $depositFee;
 
     /**
-     * @var boolean
+     * @var float
      *
      * @Serializer\Type("float")
      */
     private $settleFee;
+
+    /**
+     * @var float
+     *
+     * @Serializer\Type("float")
+     */
+    private $exchangeFee;
 
     /**
      * @var string|null
@@ -147,27 +154,35 @@ class TransferMethod
     }
 
     /**
-     * @return bool
+     * @return float
      */
-    public function isNetworkFee(): bool
+    public function getNetworkFee(): float
     {
         return $this->networkFee;
     }
 
     /**
-     * @return bool
+     * @return float
      */
-    public function isDepositFee(): bool
+    public function getDepositFee(): float
     {
         return $this->depositFee;
     }
 
     /**
-     * @return bool
+     * @return float
      */
-    public function isSettleFee(): bool
+    public function getSettleFee(): float
     {
         return $this->settleFee;
+    }
+
+    /**
+     * @return float
+     */
+    public function getExchangeFee(): float
+    {
+        return $this->exchangeFee;
     }
 
     /**
