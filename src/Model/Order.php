@@ -98,6 +98,13 @@ class Order
     private $settleData;
 
     /**
+     * @var string|null
+     *
+     * @Serializer\Type("string")
+     */
+    private $settleReceiptUrl;
+
+    /**
      * @var float|null
      *
      * @Serializer\Type("float")
@@ -241,6 +248,14 @@ class Order
     public function getSettleData(): array
     {
         return $this->settleData;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSettleReceiptUrl(): ?string
+    {
+        return $this->settleReceiptUrl;
     }
 
     /**
